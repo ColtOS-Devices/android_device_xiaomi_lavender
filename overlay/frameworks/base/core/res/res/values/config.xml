@@ -1134,12 +1134,9 @@
     <!-- Component name of the combo network location provider. -->
     <string name="config_comboNetworkLocationProvider" translatable="false">com.qualcomm.location</string>
 
-    <!-- Smart charge sysfs node and value for suspend/resume charging-->
+    <!-- Smart Charging-->
     <bool name="config_smartChargingAvailable">true</bool>
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_SmartChargingSupspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-
+    
     <!-- The list of components which should be automatically disabled for a specific package. --> 
     <string-array name="config_globallyDisabledComponents" translatable="false"> 
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
@@ -1150,8 +1147,16 @@
     <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
     <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
-    <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
+    <bool name="config_smart_replies_in_notifications_requires_targeting_p">true</bool>
 
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
     <bool name="config_cleanupUnusedFingerprints">false</bool>
+    
+    <!-- SystemInfo Sys Nodes -->
+    <integer name="config_sysBatteryTempMultiplier">10</integer>
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+    <string name="config_sysBatteryTemp">/sys/class/power_supply/battery/temp</string>
+    <string name="config_sysCPUTemp">/sys/class/thermal/thermal_zone0/temp</string>
+    <string name="config_sysGPUFreq">/sys/kernel/gpu/gpu_clock</string>
+    <string name="config_sysGPULoad">/sys/kernel/gpu/gpu_busy</string>
 </resources>
