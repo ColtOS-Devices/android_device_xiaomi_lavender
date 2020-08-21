@@ -58,6 +58,10 @@ patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$BLOB_ROOT"/v
 CAM_SDM660="$DEVICE_BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
 patchelf --add-needed camera.sdm660_shim.so "$CAM_SDM660"
 
+# Megvii
+IMGLIB="$DEVICE_BLOB_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera_imglib.so
+sed -i "s/libmmcamera_mg_facepp_lib.so/libmmcamera_mg_faceppshim.so/g" $IMGLIB
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${COLT_ROOT}" false "${CLEAN_VENDOR}"
 
