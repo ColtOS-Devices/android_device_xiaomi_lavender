@@ -13,14 +13,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from lavender device
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common Xtended stuff.
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
-XTENDED_BUILD_TYPE := OFFICIAL
-XTENDED_MAINTAINER := ⚡Hazama25⚡
+# Inherit some common ColtOS stuff.
+$(call inherit-product, vendor/colt/config/common_full_phone.mk)
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080x2340
+
+# Maintainer
+COLT_DEVICE_MAINTAINER := Hazama25
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := xtended_lavender
+PRODUCT_NAME := colt_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
