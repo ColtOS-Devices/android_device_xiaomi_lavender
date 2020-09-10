@@ -34,6 +34,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=lavender \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V11.0.1.0.QFGMIXM release-keys"
 
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys"
+BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
